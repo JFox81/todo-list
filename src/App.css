@@ -1,38 +1,48 @@
-.App {
+.todo-app {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  padding: 32px 24px 24px 24px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.todo-app h1 {
   text-align: center;
+  color: #333;
+  margin-bottom: 24px;
+  font-size: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo-list li {
+  background: #f7f7f7;
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  color: #222;
+  transition: background 0.2s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todo-list li.completed {
+  text-decoration: line-through;
+  color: #aaa;
+  background: #e0e0e0;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-list li:last-child {
+  margin-bottom: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.error {
+  color: #d32f2f;
+  text-align: center;
+  margin-bottom: 16px;
 }
